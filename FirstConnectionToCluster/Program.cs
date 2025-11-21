@@ -4,7 +4,7 @@
 var mongoURL = new MongoUrl("<your connection string>");
 var client = new MongoClient(mongoURL);
 
-var dbList = client.ListDatabases().ToList();
+var dbList = client.ListDatabases(CancellationToken.None).ToList();
 
 Console.WriteLine("The list of databases on this server is: ");
 
